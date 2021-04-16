@@ -47,13 +47,15 @@ bool ontoggle
 
 //Data structure sent by transmitter
 struct packet {
+    
     int xpos;
     int ypos;
     bool stick;
 }
-packet data;
+packet data;                                // Create an instance of the packet data structure
 
 void setup() {
+    
     serial.begin(9600);                     // Baudrate of 9600
     leftAileron.attach(ServoL);
     rightAileron.attach(ServoR);
@@ -67,6 +69,24 @@ void setup() {
 }
 
 void loop() {
+    
+    if (radio.available()) {
+
+        radio.read(&data, sizeof(packet));
+        if data.stick {
+            
+            // Toggle ontoggle
+        }
+
+        if ontoggle {
+            
+            // Servos
+
+            // Propeller
+            
+        }
+    }
+    
     // Write the main loop
         // First checks if the controller is on and data has been set
         // Then maps and passes these values to different channels
