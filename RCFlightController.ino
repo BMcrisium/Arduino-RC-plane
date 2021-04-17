@@ -1,7 +1,7 @@
 /*
 *
 *               RC Flight Controller Sketch
-*                   By insertZCodeHere
+*                   By Z0161166
 *
 */
 
@@ -37,7 +37,7 @@ Servo leftAileron;
 Servo rightAileron;
 Servo propeller;
 RF24 receiver(RadioCE, RadioCSN);           // Creates a RF24 object passing the number of the CE and CNE pins
-const byte address[6] = "00111";                 // Uniquely identifying address to link with transmitter
+const byte address[6] = "00111";            // Uniquely identifying address to link with transmitter
 int leftAileronVal;
 int rightAileronVal;
 int propellerVal;
